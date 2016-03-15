@@ -1,0 +1,30 @@
+@import './blogCustomisation.css';
+@import './index.css';
+
+
+/* stylelint-disable selector-no-type */
+
+a {
+  text-decoration: none;
+}
+
+.teaser {
+  font-family: var(--fontfamily-sans);
+}
+
+html {
+  font-size: 18px;
+  line-height: var(--text-line-height-sans-on-step-0);
+
+  @media screen and (min-width: 800px) {
+    font-size: 20px;
+  }
+}
+
+body {
+  background: #fff;
+}
+
+.component-panel {
+  overflow-x: scroll;
+}
