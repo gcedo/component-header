@@ -243,28 +243,69 @@ pre[class*&#x3D;&quot;language-&quot;] {
       base <span class="token operator" >=</span> <span class="token string" >'.'</span><span class="token punctuation" >;</span>
     <span class="token punctuation" >}</span>
     
-    <span class="token keyword" >const</span> blogsSlugs <span class="token operator" >=</span> <span class="token punctuation" >[</span>
-      <span class="token string" >'buttonwood'</span><span class="token punctuation" >,</span>
-      <span class="token string" >'erasmus'</span><span class="token punctuation" >,</span>
-      <span class="token string" >'gametheory'</span><span class="token punctuation" >,</span>
-      <span class="token string" >'gulliver'</span><span class="token punctuation" >,</span>
-      <span class="token string" >'economist-explains'</span><span class="token punctuation" >,</span>
-      <span class="token string" >'bagehot'</span><span class="token punctuation" >,</span>
-      <span class="token string" >'democracyinamerica'</span><span class="token punctuation" >,</span>
-      <span class="token string" >'freeexchange'</span><span class="token punctuation" >,</span>
-      <span class="token string" >'graphicdetail'</span><span class="token punctuation" >,</span>
-      <span class="token string" >'prospero'</span><span class="token punctuation" >,</span>
+    <span class="token keyword" >const</span> blogs <span class="token operator" >=</span> <span class="token punctuation" >[</span>
+      <span class="token punctuation" >{</span>
+        slug<span class="token punctuation" >:</span> <span class="token string" >'democracyinamerica'</span><span class="token punctuation" >,</span>
+        id<span class="token punctuation" >:</span> <span class="token string" >'21003976'</span><span class="token punctuation" >,</span>
+        title<span class="token punctuation" >:</span> <span class="token string" >'Democracy in America'</span>
+      <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+      <span class="token punctuation" >{</span>
+        slug<span class="token punctuation" >:</span> <span class="token string" >'bagehot'</span><span class="token punctuation" >,</span>
+        id<span class="token punctuation" >:</span> <span class="token string" >'21003990'</span><span class="token punctuation" >,</span>
+        title<span class="token punctuation" >:</span> <span class="token string" >'Bagehot\'s notebook'</span>
+      <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+      <span class="token punctuation" >{</span>
+        slug<span class="token punctuation" >:</span> <span class="token string" >'buttonwood'</span><span class="token punctuation" >,</span>
+        id<span class="token punctuation" >:</span> <span class="token string" >'21003991'</span><span class="token punctuation" >,</span>
+        title<span class="token punctuation" >:</span> <span class="token string" >'Buttonwood\'s notebook'</span>
+      <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+      <span class="token punctuation" >{</span>
+        slug<span class="token punctuation" >:</span> <span class="token string" >'economist-explains'</span><span class="token punctuation" >,</span>
+        id<span class="token punctuation" >:</span> <span class="token string" >'21573751'</span><span class="token punctuation" >,</span>
+        title<span class="token punctuation" >:</span> <span class="token string" >'The Economist explains'</span>
+      <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+      <span class="token punctuation" >{</span>
+        slug<span class="token punctuation" >:</span> <span class="token string" >'erasmus'</span><span class="token punctuation" >,</span>
+        id<span class="token punctuation" >:</span> <span class="token string" >'21572045'</span><span class="token punctuation" >,</span>
+        title<span class="token punctuation" >:</span> <span class="token string" >'Erasmus'</span>
+      <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+      <span class="token punctuation" >{</span>
+        slug<span class="token punctuation" >:</span> <span class="token string" >'freeexchange'</span><span class="token punctuation" >,</span>
+        id<span class="token punctuation" >:</span> <span class="token string" >'21003975'</span><span class="token punctuation" >,</span>
+        title<span class="token punctuation" >:</span> <span class="token string" >'Free exchange'</span>
+      <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+      <span class="token punctuation" >{</span>
+        slug<span class="token punctuation" >:</span> <span class="token string" >'gametheory'</span><span class="token punctuation" >,</span>
+        id<span class="token punctuation" >:</span> <span class="token string" >'21528117'</span><span class="token punctuation" >,</span>
+        title<span class="token punctuation" >:</span> <span class="token string" >'Game theory'</span>
+      <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+      <span class="token punctuation" >{</span>
+        slug<span class="token punctuation" >:</span> <span class="token string" >'graphicdetail'</span><span class="token punctuation" >,</span>
+        id<span class="token punctuation" >:</span> <span class="token string" >'21011894'</span><span class="token punctuation" >,</span>
+        title<span class="token punctuation" >:</span> <span class="token string" >'Graphic detail'</span>
+      <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+      <span class="token punctuation" >{</span>
+        slug<span class="token punctuation" >:</span> <span class="token string" >'gulliver'</span><span class="token punctuation" >,</span>
+        id<span class="token punctuation" >:</span> <span class="token string" >'21003986'</span><span class="token punctuation" >,</span>
+        title<span class="token punctuation" >:</span> <span class="token string" >'Gulliver'</span>
+      <span class="token punctuation" >}</span><span class="token punctuation" >,</span>
+      <span class="token punctuation" >{</span>
+        slug<span class="token punctuation" >:</span> <span class="token string" >'prospero'</span><span class="token punctuation" >,</span>
+        id<span class="token punctuation" >:</span> <span class="token string" >'21008659'</span><span class="token punctuation" >,</span>
+        title<span class="token punctuation" >:</span> <span class="token string" >'Prospero'</span>
+      <span class="token punctuation" >}</span>
     <span class="token punctuation" >]</span><span class="token punctuation" >;</span>
     <span class="token keyword" >export</span> <span class="token keyword" >default</span> <span class="token punctuation" >(</span>
       <span class="token operator" >&lt;</span>div<span class="token operator" >></span>
         <span class="token punctuation" >{</span>
-          blogsSlugs<span class="token punctuation" >.</span><span class="token function" >map</span><span class="token punctuation" >(</span><span class="token punctuation" >(</span>blogSlug<span class="token punctuation" >,</span> index<span class="token punctuation" >)</span> <span class="token operator" >=</span><span class="token operator" >></span>
+          blogs<span class="token punctuation" >.</span><span class="token function" >map</span><span class="token punctuation" >(</span><span class="token punctuation" >(</span>blog<span class="token punctuation" >,</span> index<span class="token punctuation" >)</span> <span class="token operator" >=</span><span class="token operator" >></span>
             <span class="token operator" >&lt;</span>Header
+              className<span class="token operator" >=</span><span class="token punctuation" >{</span><span class="token template-string" ><span class="token string" >`header--blog header--blog</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span> blog<span class="token punctuation" >.</span>id <span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >`</span></span><span class="token punctuation" >}</span>
               key<span class="token operator" >=</span><span class="token punctuation" >{</span>index<span class="token punctuation" >}</span>
-              image<span class="token operator" >=</span><span class="token punctuation" >{</span><span class="token template-string" ><span class="token string" >`</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span> base <span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >/assets/header-</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span> blogSlug <span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >.svg`</span></span><span class="token punctuation" >}</span>
-              mobileImage<span class="token operator" >=</span><span class="token punctuation" >{</span><span class="token template-string" ><span class="token string" >`</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span> base <span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >/assets/header-</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span> blogSlug <span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >-mobile.svg`</span></span><span class="token punctuation" >}</span>
+              image<span class="token operator" >=</span><span class="token punctuation" >{</span><span class="token template-string" ><span class="token string" >`</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span> base <span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >/assets/header-</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span> blog<span class="token punctuation" >.</span>slug <span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >.svg`</span></span><span class="token punctuation" >}</span>
+              mobileImage<span class="token operator" >=</span><span class="token punctuation" >{</span><span class="token template-string" ><span class="token string" >`</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span> base <span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >/assets/header-</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span> blog<span class="token punctuation" >.</span>slug <span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >-mobile.svg`</span></span><span class="token punctuation" >}</span>
               flyTitle<span class="token operator" >=</span><span class="token string" >"Some type here"</span>
-              title<span class="token operator" >=</span><span class="token string" >"Blog name goes here"</span>
+              title<span class="token operator" >=</span><span class="token punctuation" >{</span>blog<span class="token punctuation" >.</span>title<span class="token punctuation" >}</span>
               text<span class="token operator" >=</span>"There are many reasons why sceptics might find fault <span class="token keyword" >with</span> the <span class="token number" >17</span> <span class="token keyword" >for</span>
               a <span class="token keyword" >new</span> <span class="token class-name" >world</span> order<span class="token punctuation" >,</span> were enough <span class="token keyword" >for</span> the good Lord<span class="token punctuation" >.</span>"
               itemType<span class="token operator" >=</span><span class="token string" >"http://schema.org/Blog"</span>

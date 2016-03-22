@@ -1,3 +1,15 @@
+.header--blog {
+  background-position: 100% 0;
+  background-size: 1353px
+    300px;
+}
+
+.header--blog .header__mobile-image {
+  background-position: 0 0;
+  background-size: 100vw
+    181.81818vw;
+}
+
 .header__additional-element {
   margin: 0;
   color: #FFFFFF;
@@ -37,17 +49,78 @@
 
 /* stylelint-disable selector-class-pattern */
 
+/* democracyinamerica */
+
 .header--blog21003976 {
   background-color: #004388;
-  background-position: 100% 0;
-  background-size: 1353px
-    300px;
 }
 
-.header--blog21003976 .header__mobile-image {
-  background-position: 0 0;
-  background-size: 100vw
-    181.81818vw;
+/* bagehot */
+
+.header--blog21003990 {
+  background-color: #B51915;
+}
+
+/* buttonwood */
+
+.header--blog21003991 {
+  background-color: #bfe7f1;
+}
+
+.header--blog21003991 .header__title,
+.header--blog21003991 .header__title-link,
+.header--blog21003991 .header__text {
+  color: #121212;
+  color: #121212;
+}
+
+/* economist-explains */
+
+.header--blog21573751 {
+  background-color: #916caf;
+}
+
+/* erasmus */
+
+.header--blog21572045 {
+  background-color: #bd902d;
+}
+
+/* freeexchange */
+
+.header--blog21003975 {
+  background-color: #695f4b;
+}
+
+/* gametheory */
+
+.header--blog21528117 {
+  background-color: #5e9732;
+}
+
+/* graphicdetail */
+
+.header--blog21011894 {
+  background-color: #5f95b8;
+}
+
+/* gulliver */
+
+.header--blog21003986 {
+  background-color: #5ac5c4;
+}
+
+/* prospero */
+
+.header--blog21008659 {
+ background-color: #ece8e1;
+}
+
+.header--blog21008659 .header__title,
+.header--blog21008659 .header__title-link,
+.header--blog21008659 .header__text {
+  color: #121212;
+  color: #121212;
 }
 
 /* stylelint-enable selector-class-pattern */
@@ -211,10 +284,9 @@ body {
 @media (max-width: 35.999rem) {
 
   .header__wrapper {
-    height: 300px;
-    padding: 0.35em
+    padding: 70vw
       1.25rem
-      0;
+      1.875em;
   }
   }
 
@@ -287,7 +359,7 @@ body {
 @media (max-width: 35.999rem) {
 
   .header--large-mode .header__title {
-    padding: 0.714em
+    padding: 0.1em
         15%
         1em;
   }
@@ -306,8 +378,8 @@ body {
   display: inline-block;
   margin-bottom: 0.1em;
   padding: 0.1em
-    1em;
-  padding-bottom: 0;
+    1em
+    0.1em;
   color: #E3120b;
   font-size: 0.88889em;
   font-weight: normal;
