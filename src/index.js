@@ -1,8 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 export default function Header({
-  image,
-  mobileImage,
   flyTitle,
   smallMode,
   title,
@@ -49,29 +47,24 @@ export default function Header({
         {children}
       </div>));
   }
-  const headerStyle = {};
-  const headerMobileImageStyle = {};
-  if (image) {
-    headerStyle.backgroundImage = `url(${ image })`;
-  }
-  if (mobileImage) {
-    headerMobileImageStyle.backgroundImage = `url(${ mobileImage })`;
-  }
   return (
     <header
-      className={classNames('header', className, {
-        'header--small-mode': Boolean(smallMode) === true,
-        'header--large-mode': Boolean(smallMode) === false,
-      })}
-      itemScope itemType={itemType} itemProp={itemProp}
+      className={classNames(
+        'header',
+        className,
+        {
+          'header--small-mode': Boolean(smallMode) === true,
+          'header--large-mode': Boolean(smallMode) === false,
+        }
+      )}
+      itemScope
+      itemType={itemType}
+      itemProp={itemProp}
       role="header"
-      style={headerStyle}
     >
-      <div className="header__mobile-image" style={headerMobileImageStyle}>
-        <div className="header__wrapper">
-          <div className="header__content">
-            {headerContent}
-          </div>
+      <div className="header__wrapper">
+        <div className="header__content">
+          {headerContent}
         </div>
       </div>
     </header>
@@ -80,8 +73,6 @@ export default function Header({
 
 if (process.env.NODE_ENV === 'production') {
   Header.propTypes = {
-    image: React.PropTypes.string,
-    mobileImage: React.PropTypes.string,
     flyTitle: React.PropTypes.string,
     smallMode: React.PropTypes.bool,
     title: React.PropTypes.string.isRequired,

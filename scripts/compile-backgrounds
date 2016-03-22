@@ -1,0 +1,62 @@
+#!/usr/bin/env node
+'use strict';
+const fs = require('fs');
+const postcss = require('postcss');
+const postcssSVG = require('postcss-svg');
+const mobileWidth = '36rem';
+
+function makePostCSS() {
+  const processors = [
+    postcssSVG({
+      paths: [
+        './banners/',
+        './banners-mobile/',
+      ],
+      defaults: '',
+      silent: false,
+      func: 'svg',
+    })
+  ];
+  return postcss(processors);
+}
+
+const files = fs.readdirSync(__dirname + '/../banners')
+  .map(function removeSvgExt(fname) {
+    return fname
+        .replace(/\.svg$/, '')
+        .replace(/^.*?banners\//, '');
+  });
+
+function generateSourceCSS(blogSlug) {
+  const className = '.banner--' + blogSlug;
+  const source = [];
+  source.push(
+    ''.concat(
+      className,
+      ' {\n  background: svg("',
+      blogSlug,
+       '");\n}\n'
+    )
+  );
+  source.push(
+    ''.concat(
+      '@media (max-width: ' + mobileWidth + ') {\n  ',
+      className,
+      ' {\n    background: svg("',
+      blogSlug + '-mobile', '");\n  }\n}\n'
+    )
+  );
+  return source.join('\n');
+}
+
+files.forEach(function(fileName) {
+  const outName = 'backgrounds/' + fileName + '.css';
+  let css = makePostCSS()
+    .process(generateSourceCSS(fileName))
+    .css;
+  css = css.replace(/(\d+\.\d{2})\d+/g, '$1');
+  css = css.replace(/%3c\!--.*?--%3e/gi, '');
+  css = css.replace(/%20xmlns%3Asketch%3D%22http%3A%2F%2Fwww.bohemiancoding.com%2Fsketch%2Fns%22/g, '')
+  console.log('Writing', outName)
+  fs.writeFileSync(outName, css)
+});

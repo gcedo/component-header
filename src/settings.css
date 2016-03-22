@@ -1,0 +1,13 @@
+:root {
+  --header-background-color-bagehot: #b51915;
+  --header-background-color-buttonwood: #bfe7f1;
+  --header-background-color-democracyinamerica: #004388;
+  --header-background-color-economist-explains: #916caf;
+  --header-background-color-erasmus: #bd902d;
+  --header-background-color-freeexchange: #695f4b;
+  --header-background-color-gametheory: #5e9732;
+  --header-background-color-graphicdetail: #5f95b8;
+  --header-background-color-gulliver: #5ac5c4;
+  --header-background-color-prospero: #ece8e1;
+  --dark-text: var(--header-background-color-beijing, #121212);
+}

@@ -1,49 +1,74 @@
-.header__additional-element {
-  margin: 0;
-  color: var(--header__additional-element-color, var(--color-thimphu));
+@import '../backgrounds/bagehot.css';
+@import '../backgrounds/buttonwood.css';
+@import '../backgrounds/democracyinamerica.css';
+@import '../backgrounds/economist-explains.css';
+@import '../backgrounds/erasmus.css';
+@import '../backgrounds/freeexchange.css';
+@import '../backgrounds/gametheory.css';
+@import '../backgrounds/graphicdetail.css';
+@import '../backgrounds/gulliver.css';
+@import '../backgrounds/prospero.css';
+
+.header--blog-bagehot {
+  background-color: var(--header-background-color-bagehot);
 }
 
-.header__follow-us-title {
-  margin-bottom: var(--header__follow-us-title-margin-bottom, var(--grid-spacing-hedgehog));
-
-  @media (--header-viewport-big) {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 40px;
-  }
+.header--blog-buttonwood {
+  background-color: var(--header-background-color-buttonwood);
 }
 
-.header__follow-us-icons {
-
-  @media (--header-viewport-big) {
-    display: inline-block;
-    vertical-align: middle;
-    padding: 0 var(--grid-gutter-s);
-    line-height: 40px;
-  }
+.header--blog-buttonwood .header__title,
+.header--blog-buttonwood .header__title-link,
+.header--blog-buttonwood .header__text {
+  color: var(--dark-text);
 }
 
-.header__additional-element .Icon {
-  background: var(--header__additional-element-icon-background, var(--color-thimphu));
-  border-radius: 50%;
-  fill: var(--header__additional-element-icon, var(--color-chicago));
+.header--blog-democracyinamerica {
+  background-color: var(--header-background-color-democracyinamerica);
 }
 
-/* stylelint-disable selector-class-pattern */
-
-.header--blog21003976 {
-  background-color: #004388;
-  background-position: 100% 0;
-  background-size:
-    calc(var(--header-image-aspect-ratio, 4.51) * var(--header-viewport-big-height, 300px))
-    var(--header-viewport-big-height, 300px);
+.header--blog-economist-explains {
+  background-color: var(--header-background-color-economist-explains);
 }
 
-.header--blog21003976 .header__mobile-image {
-  background-position: 0 0;
-  background-size:
-    100vw
-    calc(100vw / var(--header-mobile-image-aspect-ratio, 0.55));
+.header--blog-erasmus {
+  background-color: var(--header-background-color-erasmus);
 }
 
-/* stylelint-enable selector-class-pattern */
+.header--blog-erasmus .header__title,
+.header--blog-erasmus .header__title-link,
+.header--blog-erasmus .header__text {
+  color: var(--dark-text);
+}
+
+.header--blog-freeexchange {
+  background-color: var(--header-background-color-freeexchange);
+}
+
+.header--blog-gametheory {
+  background-color: var(--header-background-color-gametheory);
+}
+
+.header--blog-graphicdetail {
+  background-color: var(--header-background-color-graphicdetail);
+}
+
+.header--blog-gulliver {
+  background-color: var(--header-background-color-gulliver);
+}
+
+.header--blog-gulliver .header__title,
+.header--blog-gulliver .header__title-link,
+.header--blog-gulliver .header__text {
+  color: var(--dark-text);
+}
+
+.header--blog-prospero {
+  background-color: var(--header-background-color-prospero);
+}
+
+.header--blog-prospero .header__title,
+.header--blog-prospero .header__title-link,
+.header--blog-prospero .header__text {
+  color: var(--dark-text);
+}
