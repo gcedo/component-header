@@ -243,23 +243,39 @@ pre[class*&#x3D;&quot;language-&quot;] {
       base <span class="token operator" >=</span> <span class="token string" >'.'</span><span class="token punctuation" >;</span>
     <span class="token punctuation" >}</span>
     
+    <span class="token keyword" >const</span> blogsSlugs <span class="token operator" >=</span> <span class="token punctuation" >[</span>
+      <span class="token string" >'buttonwood'</span><span class="token punctuation" >,</span>
+      <span class="token string" >'erasmus'</span><span class="token punctuation" >,</span>
+      <span class="token string" >'gametheory'</span><span class="token punctuation" >,</span>
+      <span class="token string" >'gulliver'</span><span class="token punctuation" >,</span>
+      <span class="token string" >'economist-explains'</span><span class="token punctuation" >,</span>
+      <span class="token string" >'bagehot'</span><span class="token punctuation" >,</span>
+      <span class="token string" >'democracyinamerica'</span><span class="token punctuation" >,</span>
+      <span class="token string" >'freeexchange'</span><span class="token punctuation" >,</span>
+      <span class="token string" >'graphicdetail'</span><span class="token punctuation" >,</span>
+      <span class="token string" >'prospero'</span><span class="token punctuation" >,</span>
+    <span class="token punctuation" >]</span><span class="token punctuation" >;</span>
     <span class="token keyword" >export</span> <span class="token keyword" >default</span> <span class="token punctuation" >(</span>
       <span class="token operator" >&lt;</span>div<span class="token operator" >></span>
-        <span class="token operator" >&lt;</span>Header
-          className<span class="token operator" >=</span><span class="token string" >"header--blog21003976"</span>
-          image<span class="token operator" >=</span><span class="token punctuation" >{</span><span class="token template-string" ><span class="token string" >`</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span> base <span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >/assets/header-democracyinamerica.svg`</span></span><span class="token punctuation" >}</span>
-          mobileImage<span class="token operator" >=</span><span class="token punctuation" >{</span><span class="token template-string" ><span class="token string" >`</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span> base <span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >/assets/header-democracyinamerica-mobile.svg`</span></span><span class="token punctuation" >}</span>
-          flyTitle<span class="token operator" >=</span><span class="token string" >"Some type here"</span>
-          title<span class="token operator" >=</span><span class="token string" >"Blog name goes here"</span>
-          text<span class="token operator" >=</span>"There are many reasons why sceptics might find fault <span class="token keyword" >with</span> the <span class="token number" >17</span> <span class="token keyword" >for</span>
-          a <span class="token keyword" >new</span> <span class="token class-name" >world</span> order<span class="token punctuation" >,</span> were enough <span class="token keyword" >for</span> the good Lord<span class="token punctuation" >.</span>"
-          itemType<span class="token operator" >=</span><span class="token string" >"http://schema.org/Blog"</span>
-          itemProp<span class="token operator" >=</span><span class="token string" >"blog"</span>
-          link<span class="token operator" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span>
-            href<span class="token punctuation" >:</span> <span class="token string" >'http://www.google.com'</span><span class="token punctuation" >,</span>
-            title<span class="token punctuation" >:</span> <span class="token string" >'Clicke here and go somewhere'</span><span class="token punctuation" >,</span>
-          <span class="token punctuation" >}</span><span class="token punctuation" >}</span>
-        <span class="token operator" >/</span><span class="token operator" >></span>
+        <span class="token punctuation" >{</span>
+          blogsSlugs<span class="token punctuation" >.</span><span class="token function" >map</span><span class="token punctuation" >(</span><span class="token punctuation" >(</span>blogSlug<span class="token punctuation" >,</span> index<span class="token punctuation" >)</span> <span class="token operator" >=</span><span class="token operator" >></span>
+            <span class="token operator" >&lt;</span>Header
+              key<span class="token operator" >=</span><span class="token punctuation" >{</span>index<span class="token punctuation" >}</span>
+              image<span class="token operator" >=</span><span class="token punctuation" >{</span><span class="token template-string" ><span class="token string" >`</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span> base <span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >/assets/header-</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span> blogSlug <span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >.svg`</span></span><span class="token punctuation" >}</span>
+              mobileImage<span class="token operator" >=</span><span class="token punctuation" >{</span><span class="token template-string" ><span class="token string" >`</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span> base <span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >/assets/header-</span><span class="token interpolation" ><span class="token interpolation-punctuation punctuation" >${</span> blogSlug <span class="token interpolation-punctuation punctuation" >}</span></span><span class="token string" >-mobile.svg`</span></span><span class="token punctuation" >}</span>
+              flyTitle<span class="token operator" >=</span><span class="token string" >"Some type here"</span>
+              title<span class="token operator" >=</span><span class="token string" >"Blog name goes here"</span>
+              text<span class="token operator" >=</span>"There are many reasons why sceptics might find fault <span class="token keyword" >with</span> the <span class="token number" >17</span> <span class="token keyword" >for</span>
+              a <span class="token keyword" >new</span> <span class="token class-name" >world</span> order<span class="token punctuation" >,</span> were enough <span class="token keyword" >for</span> the good Lord<span class="token punctuation" >.</span>"
+              itemType<span class="token operator" >=</span><span class="token string" >"http://schema.org/Blog"</span>
+              itemProp<span class="token operator" >=</span><span class="token string" >"blog"</span>
+              link<span class="token operator" >=</span><span class="token punctuation" >{</span><span class="token punctuation" >{</span>
+                href<span class="token punctuation" >:</span> <span class="token string" >'http://www.google.com'</span><span class="token punctuation" >,</span>
+                title<span class="token punctuation" >:</span> <span class="token string" >'Clicke here and go somewhere'</span><span class="token punctuation" >,</span>
+              <span class="token punctuation" >}</span><span class="token punctuation" >}</span>
+            <span class="token operator" >/</span><span class="token operator" >></span>
+          <span class="token punctuation" >)</span>
+        <span class="token punctuation" >}</span>
       <span class="token operator" >&lt;</span><span class="token operator" >/</span>div<span class="token operator" >></span>
     <span class="token punctuation" >)</span><span class="token punctuation" >;</span>
     
